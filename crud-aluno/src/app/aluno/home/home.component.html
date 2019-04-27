@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Nome</td>
+      <td>E-mail</td>
+      <td>Matrícula</td>
+      <td width=275 align="center">Ações</td>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let aluno of alunos">
+        <td>{{ aluno.nome }}</td>
+        <td>{{ aluno.email }}</td>
+        <td>{{ aluno.matricula }}</td>
+        <td> 
+            <a class="btn btn-success" routerLink="/edit/{{aluno.id_aluno}}">Editar</a>
+            <a class="btn btn-danger" (click)="deletarAluno(aluno.id_aluno)">Excluir</a>
+        </td>
+     </tr>
+     <tr *ngIf="!alunos" align="center">
+         <td colspan="4">
+            <i>Nenhum aluno cadastrado</i>
+        </td>
+     </tr>
+  </tbody>
+ 
+</table>

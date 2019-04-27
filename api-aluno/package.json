@@ -1,0 +1,25 @@
+{
+  "name": "api-aluno",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "binary-extensions": "^2.0.0",
+    "bluebird": "3.5.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "is-glob": "4.0.0",
+    "promise-mysql": "^3.3.1",
+    "semver": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
