@@ -10,7 +10,6 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { HomeComponent } from './aluno/home/home.component';
 import { AddComponent } from './aluno/add/add.component';
 import { EditComponent } from './aluno/edit/edit.component';
-import { ShowComponent } from './aluno/show/show.component';
 import { AlunoService } from './servicos/aluno.service';
 
 @NgModule({
@@ -19,8 +18,7 @@ import { AlunoService } from './servicos/aluno.service';
     NavbarComponent,
     HomeComponent,
     AddComponent,
-    EditComponent,
-    ShowComponent
+    EditComponent
   ],
   imports: [
     BrowserModule,

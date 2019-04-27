@@ -2,3 +2,11 @@
     width:75px;
     margin-left: 7px;
 }
+
+.table > thead > tr > th, .table > tbody > tr > td {
+    text-align: center;
+}
+
+.table > tbody > tr > td {
+    padding: 16px 0px 6px 0px;
+}

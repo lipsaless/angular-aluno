@@ -1,46 +1,53 @@
+// importando model Aluno
 const Aluno = require('../models/Aluno');
 
 class AlunoController {
-    async getAll(req, res) {
+    // método que consulta no banco todos os alunos
+    getAll(req, res) {
+        // acessando o método list() no model Aluno
         Aluno.list()
             .then(result => {
+                // retornando resposta do model em json
                 res.json(result);
             });
     }
-
-    async getAluno(req, res) {
+    // método que retorna 1 aluno
+    getAluno(req, res) {
+        // acessando o método getOne() no model Aluno
         Aluno.getOne(req.params)
             .then(result => {
+                // retornando resposta do model em json
                 res.json(result);
             });
     }
-
-    async criar(req, res) {
+    // método que cria um novo aluno com os dados informados
+    criar(req, res) {
+        // acessando o método create() no model Aluno
         Aluno.create(req.body)
             .then(result => {
+                // retornando resposta do model em json
                 res.json(result);
             });
     }
-
-    async alterar(req, res) {
+    // método que altera o aluno no banco, passando os dados do formulário
+    alterar(req, res) {
+        // acessando o método update() no model Aluno
         Aluno.update(req.body)
             .then(result => {
+                // retornando resposta do model em json
                 res.json(result);
-            })
-            .catch(err => {
-                console.log(err);
             });
     }
-
-    async delete(req, res) {
+    // método que excluir o aluno
+    delete(req, res) {
+        // acessando o método deletar() no model Aluno
         Aluno.deletar(req.params)
             .then(result => {
+                // retornando resposta do model em json
                 res.json(result);
-            })
-            .catch(err => {
-                console.log(err);
             });
     }
 }
 
+// exportando controller AlunoController
 module.exports = new AlunoController();

@@ -1,3 +1,4 @@
+// dados do banco mysql
 const db = {
     database: {
         host: 'localhost',
@@ -7,4 +8,5 @@ const db = {
     }
 }
 
+// exportando esses dados
 module.exports = db;

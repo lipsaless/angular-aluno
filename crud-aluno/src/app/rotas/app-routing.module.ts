@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../aluno/home/home.component';
 import { AddComponent } from '../aluno/add/add.component';
 import { EditComponent } from '../aluno/edit/edit.component';
-import { ShowComponent } from '../aluno/show/show.component';
 
 // rotas definidas
 const routes: Routes = [
@@ -14,8 +13,7 @@ const routes: Routes = [
     { path:"", redirectTo:"/home", pathMatch:"full" },
     { path: "home", component: HomeComponent },
     { path: "add", component: AddComponent },
-    { path: "edit/:id_aluno", component: EditComponent },
-    { path: "show/:id_aluno", component: ShowComponent }
+    { path: "edit/:id_aluno", component: EditComponent }
 ];
 
 @NgModule({

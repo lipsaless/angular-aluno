@@ -14,18 +14,21 @@ export class AddComponent implements OnInit {
         private alunoService: AlunoService,
         private router: Router
     ) { }
-
+    
+    // método acionado ao iniciar esta página
     ngOnInit() {
 
     }
-    
+    // função que adiciona aluno
     addAluno() {
+        // aciono o serviço responsável pelas rotas
         this.alunoService
             .adicionaAluno(this.aluno).then(res => {
+                // após finalizar voltar para /home
                 this.goBack();
             });
     }
-
+    // retorna para /home
     goBack() {
         this.router.navigate(['/home']);
     }

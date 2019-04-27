@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <!-- <div class="panel-heading">Employee Entry Form : You can add an employee's detail information into this EMS Apps.</div> -->
+  <div class="panel-heading">Editar aluno</div>
   <div class="panel-body">
     <form class="form-horizontal" (submit)="alterarAluno()">
   <div class="form-group">
@@ -15,9 +15,8 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="department" class="col-sm-2 control-label">Matrícula: </label>
     <div class="col-sm-9">
-      <input type="text" class="form-control"  [(ngModel)]="aluno.matricula" name="matricula">
+      <input type="hidden" class="form-control"  [(ngModel)]="aluno.matricula" name="matricula">
     </div>
   </div>
 
