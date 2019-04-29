@@ -3,6 +3,7 @@
 # informações:
 - instale o node;
 - instale o yarn;
+- altere os dados do mysql em: api-aluno > src > config > db.js
 
 # Api
 - acesse a pasta api-aluno
