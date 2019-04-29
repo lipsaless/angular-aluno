@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 
     // variável que vai armazenar a lista de alunos após a requisição
     alunos:any = [];
+    contagem: any;
 
     // método acionado ao iniciar esta página
     ngOnInit() {
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit {
         const alunos = await this.alunoService.getAlunos();
         // a responsta é transformada em json e guardada na variável alunos, que está no escopo global
         this.alunos = alunos.json().data;
+        this.contagem = this.alunos.length;
     }
 
     // método que exclui aluno passando o ID do mesmo

@@ -27,11 +27,22 @@ export class EditComponent implements OnInit {
     // retorna os dados do aluno clicado e guarda na váriavel aluno
     async dadosAluno() {
         const dados = await this.alunoService.getAluno(this.idAluno);
+        // resposta da requisição é guardada na variável global aluno
         this.aluno = dados.json().data;
     };
 
     // faz a requisição de update do serviço, passando o id do aluno e seus dados
     alterarAluno() {
+        if (!this.aluno.nome) {
+            alert('Nome não foi informado');
+            return false;
+        }
+
+        if (!this.aluno.email) {
+            alert('E-mail não foi informado');
+            return false;
+        }
+
         this.alunoService
             .updateAluno(this.idAluno, this.aluno).then(res => {
                 // ao término da requisição volta para a home
