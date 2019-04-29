@@ -1,6 +1,6 @@
 ### Crud de aluno com servidor node mysql
 
-# informações:
+# Info:
 - instale o node;
 - instale o yarn;
 - altere os dados do mysql em: api-aluno > src > config > db.js
@@ -8,7 +8,7 @@
 # Api
 - acesse a pasta api-aluno
 - dê o seguinte comando: yarn
-- inicie o servidor, comando: yarn dev
+- inicie o servidor com o comando: yarn dev
 
 # Sistema
 - acessse a pasta crud-aluno
