@@ -1,3 +1,4 @@
+import { Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AlunoService } from '../../servicos/aluno.service';
 
@@ -9,6 +10,7 @@ import { AlunoService } from '../../servicos/aluno.service';
 export class HomeComponent implements OnInit {
 
     constructor(
+        private router: Router,
         private alunoService:AlunoService
     ) { }
 
@@ -30,8 +32,13 @@ export class HomeComponent implements OnInit {
         this.contagem = this.alunos.length;
     }
 
+    editarAluno(id_aluno) {
+        // redireciona para a view de aluno passando como parâmetro na rota o ID
+        this.router.navigate([`/edit/${id_aluno}`]);
+    }
+
     // método que exclui aluno passando o ID do mesmo
-    deletarAluno(id_aluno){
+    deletarAluno(id_aluno) {
         // confirmação se realmente quer excluir o registro
         if (confirm('Deseja realmente excluir este registro?') === true) {
             // consulta o serviço, na rota de deletar passando o ID

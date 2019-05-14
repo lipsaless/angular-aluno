@@ -14,7 +14,8 @@
             <td>{{ aluno.email }}</td>
             <td>{{ aluno.matricula }}</td>
             <td> 
-                <a class="btn btn-success" routerLink="/edit/{{aluno.id_aluno}}">Editar</a>
+                <!-- <a class="btn btn-success" routerLink="/edit/{{aluno.id_aluno}}">Editar</a> -->
+                <a class="btn btn-success" (click)="editarAluno(aluno.id_aluno)">Editar</a>
                 <a class="btn btn-danger" (click)="deletarAluno(aluno.id_aluno)">Excluir</a>
             </td>
         </tr>
